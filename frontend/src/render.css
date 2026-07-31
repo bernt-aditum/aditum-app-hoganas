@@ -1,0 +1,32 @@
+/* Shared component styles — IDENTICAL in the deployed app and the builder preview.
+   Self-contained under .aditum-render so it never depends on the host app's vars
+   or shell CSS. Both apps wrap the rendered manifest in <div class="aditum-render">. */
+.aditum-render {
+  --r-surface: #fcfcfb;
+  --r-page: #f9f9f7;
+  --r-ink: #0b0b0b;
+  --r-muted: #52514e;
+  --r-faint: #898781;
+  --r-line: #e1e0d9;
+}
+:root[data-theme="dark"] .aditum-render {
+  --r-surface: #1a1a19;
+  --r-page: #0d0d0d;
+  --r-ink: #ffffff;
+  --r-muted: #c3c2b7;
+  --r-faint: #898781;
+  --r-line: #2c2c2a;
+}
+
+.aditum-render .kpis { display: flex; gap: 12px; flex-wrap: wrap; }
+.aditum-render .kpi { flex: 1; min-width: 120px; background: var(--r-page); border: 1px solid var(--r-line); border-radius: 10px; padding: 12px; }
+.aditum-render .kpi-l { font-size: 12px; color: var(--r-muted); font-family: ui-monospace, monospace; }
+.aditum-render .kpi-v { font-size: 26px; font-weight: 800; color: var(--r-ink); }
+.aditum-render .kpi-a { font-size: 11px; color: var(--r-faint); text-transform: uppercase; }
+
+.aditum-render .tbl { width: 100%; border-collapse: collapse; font-size: 13px; color: var(--r-ink); }
+.aditum-render .tbl th, .aditum-render .tbl td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--r-line); }
+.aditum-render .tbl th { color: var(--r-muted); }
+.aditum-render .tbl td { font-variant-numeric: tabular-nums; }
+
+.aditum-render .nodata { padding: 20px 12px; border: 1px dashed var(--r-line); border-radius: 10px; background: var(--r-page); color: var(--r-muted); font-size: 12.5px; text-align: center; }
